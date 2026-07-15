@@ -1,6 +1,6 @@
 {
   "name": "deploy-doctor-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deployment validation CLI — checks Docker, Kubernetes, Helm, Terraform, cloud CLIs, Git, Node, disk, memory, ports, and networking.",
   "type": "module",
   "main": "./dist/index.cjs",
