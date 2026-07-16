@@ -1,6 +1,6 @@
 {
   "name": "deploy-doctor-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Deployment validation CLI — checks Docker, Kubernetes, Helm, Terraform, cloud CLIs, Git, Node, disk, memory, ports, and networking.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -39,7 +39,16 @@
     "devops",
     "cli",
     "azure",
-    "aws"
+    "aws",
+    "preflight",
+    "deploy-check",
+    "ci-cd",
+    "helm",
+    "doctor",
+    "diagnostics",
+    "environment-check",
+    "kubectl",
+    "nodejs"
   ],
   "author": "Anil Kumar <anilachary67@gmail.com>",
   "license": "MIT",
