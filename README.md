@@ -29,6 +29,8 @@ Validates:
 - Ports
 - Networking / DNS
 
+## Quick Start
+
 ## CLI
 
 ```bash
@@ -58,11 +60,11 @@ Environment looks deploy-ready.
 ## Programmatic API
 
 ```ts
-import { runDoctor, formatReport } from "deploy-doctor-cli";
+import { runDoctor, formatReport } from 'deploy-doctor-cli';
 
 const report = await runDoctor({
-  only: ["docker", "kubernetes", "node", "disk"],
-  ports: ["127.0.0.1:5432"],
+  only: ['docker', 'kubernetes', 'node', 'disk'],
+  ports: ['127.0.0.1:5432'],
 });
 
 console.log(formatReport(report));
@@ -71,15 +73,15 @@ console.log(report.healthy);
 
 ## Options
 
-| Option | Description |
-|--------|-------------|
-| `only` / `skip` | Filter checks |
-| `ports` | TCP probes (`host:port` or port) |
-| `hosts` | DNS lookups |
-| `diskPath` | Filesystem path |
-| `maxDiskUsedPercent` | Default `90` |
-| `maxMemoryUsedPercent` | Default `95` |
-| `softMissingCli` | Default `true` |
+| Option                 | Description                      |
+| ---------------------- | -------------------------------- |
+| `only` / `skip`        | Filter checks                    |
+| `ports`                | TCP probes (`host:port` or port) |
+| `hosts`                | DNS lookups                      |
+| `diskPath`             | Filesystem path                  |
+| `maxDiskUsedPercent`   | Default `90`                     |
+| `maxMemoryUsedPercent` | Default `95`                     |
+| `softMissingCli`       | Default `true`                   |
 
 ## Versioning
 
@@ -129,7 +131,7 @@ Works with Express, Fastify, Hono, NestJS, and plain Node HTTP servers. Import E
 ## TypeScript Usage
 
 ```ts
-import { /* symbols */ } from "deploy-doctor-cli";
+import { runDoctor, formatReport } from 'deploy-doctor-cli';
 ```
 
 Types ship with the package (`types` / `exports.types`). Enable `strict` in your `tsconfig` for the best DX.
@@ -169,21 +171,22 @@ Open a GitHub issue using the bug template.
 ## Migration Guide
 
 ### From 0.x / early drafts
+
 This package follows SemVer. Breaking changes land in major releases and are called out in `CHANGELOG.md`.
 
 ### Upgrading patch/minor
+
 Patch and minor releases are backward compatible. Run your test suite after upgrading.
 
 ## Troubleshooting
 
-| Symptom | Likely cause | Fix |
-|---------|--------------|-----|
-| `ERR_MODULE_NOT_FOUND` | Wrong Node version / bad import path | Use Node 18+ and package `exports` |
-| Types not resolving | Old moduleResolution | Use `bundler` or `node16`+ |
-| Auth / network failures | Missing env or blocked egress | Check credentials and firewall |
-| Unexpected runtime errors | Invalid input | Validate options; read error message |
+| Symptom                   | Likely cause                         | Fix                                  |
+| ------------------------- | ------------------------------------ | ------------------------------------ |
+| `ERR_MODULE_NOT_FOUND`    | Wrong Node version / bad import path | Use Node 18+ and package `exports`   |
+| Types not resolving       | Old moduleResolution                 | Use `bundler` or `node16`+           |
+| Auth / network failures   | Missing env or blocked egress        | Check credentials and firewall       |
+| Unexpected runtime errors | Invalid input                        | Validate options; read error message |
 
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md). PRs with tests and docs are welcome.
-
