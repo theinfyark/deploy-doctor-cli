@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.0] - 2026-08-24
+
+### Changed
+
+- Port check messages now say **reachable (in use)** vs **not reachable (free or filtered)** so success is not mistaken for a free port
 
 ## [1.0.3] - 2026-07-18
 

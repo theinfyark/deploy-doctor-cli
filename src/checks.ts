@@ -284,8 +284,8 @@ export async function checkPorts(options: DoctorOptions = {}): Promise<CheckResu
     return {
       status: failed.length ? "fail" : "pass",
       message: failed.length
-        ? `Unreachable ports: ${failed.join(", ")}`
-        : `All ${targets.length} port(s) reachable`,
+        ? `Not reachable (free or filtered): ${failed.join(", ")}`
+        : `All ${targets.length} port(s) reachable (in use)`,
       details,
     };
   });

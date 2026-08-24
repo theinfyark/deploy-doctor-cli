@@ -40,6 +40,7 @@ describe("deploy-doctor-cli", () => {
 
     const probed = await checkPorts({ ports: ["127.0.0.1:1"] });
     expect(probed.status).toBe("fail");
+    expect(probed.message).toMatch(/not reachable \(free or filtered\)/i);
   });
 
   it("checks networking DNS", async () => {
