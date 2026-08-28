@@ -1,7 +1,7 @@
 {
   "name": "deploy-doctor-cli",
   "version": "1.1.0",
-  "description": "Deployment validation CLI — checks Docker, Kubernetes, Helm, Terraform, cloud CLIs, Git, Node, disk, memory, ports, and networking.",
+  "description": "Deployment validation CLI \u2014 checks Docker, Kubernetes, Helm, Terraform, cloud CLIs, Git, Node, disk, memory, ports, and networking.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -72,5 +72,12 @@
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
     "vitest": "^3.2.3"
+  },
+  "overrides": {
+    "esbuild": ">=0.28.1",
+    "nanoid": ">=3.3.18",
+    "postcss": ">=8.5.23",
+    "browserslist": ">=4.28.7",
+    "brace-expansion": ">=2.1.4"
   }
 }
